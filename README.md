@@ -70,7 +70,7 @@ We ask the code users to cite the following manuscript in any publications repor
 ```
 @article{TellesRibeiro2024SpringpotTune,
    author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
-   title   = {{A}dvanced creep modeling of polypropylene: {A} variable-order fractional calculus approach},
+   title   = "{Advanced creep modeling of polypropylene: A variable-order fractional calculus approach}",
    journal = {Under Review},
    year    = {2024},
    volume  = {~},
