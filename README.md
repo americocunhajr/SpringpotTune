@@ -3,7 +3,7 @@
 **SpringpotTune: Variable-Order Springpot Model Tuning via Cross-Entropy Method** is a Matlab package designed to fit variable-order springpot models (fractional rheological elements) using the Cross-Entropy (CE) method for global optimization. With simple adaptations, the SpringpotFit framework can be extended to optimize other variable-order fractional models in rheology and time-dependent systems, offering a versatile and robust approach to parameter identification.
 
 <p align="center">
-<img src="logo/SpringpotFitFramework.png" width="75%">
+<img src="logo/SpringpotTuneFramework.png" width="75%">
 </p>
 
 **SpringpotTune** uses as optimization tool the package **CEopt - Cross-Entropy Optimizer**, which can be downloaded at <a href="https://ceopt.org" target="_blank">https://ceopt.org</a>.
