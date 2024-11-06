@@ -1,12 +1,12 @@
-## Variable-Order Springpot Model Fitting via Cross-Entropy Method
+## Variable-Order Springpot Model Tuning via Cross-Entropy Method
 
-**SpringpotFit: Variable-Order Springpot Model Fitting via Cross-Entropy Method** is a Matlab package designed to fit variable-order springpot models (fractional rheological elements) using the Cross-Entropy (CE) method for global optimization. With simple adaptations, the SpringpotFit framework can be extended to optimize other variable-order fractional models in rheology and time-dependent systems, offering a versatile and robust approach to parameter identification.
+**SpringpotTune: Variable-Order Springpot Model Tuning via Cross-Entropy Method** is a Matlab package designed to fit variable-order springpot models (fractional rheological elements) using the Cross-Entropy (CE) method for global optimization. With simple adaptations, the SpringpotFit framework can be extended to optimize other variable-order fractional models in rheology and time-dependent systems, offering a versatile and robust approach to parameter identification.
 
 <p align="center">
 <img src="logo/SpringpotFitFramework.png" width="75%">
 </p>
 
-**SpringpotFit** uses as optimization tool the package **CEopt - Cross-Entropy Optimizer**, which can be downloaded at <a href="https://ceopt.org" target="_blank">https://ceopt.org</a>.
+**SpringpotTune** uses as optimization tool the package **CEopt - Cross-Entropy Optimizer**, which can be downloaded at <a href="https://ceopt.org" target="_blank">https://ceopt.org</a>.
 
 ### Table of Contents
 - [Overview](#overview)
@@ -21,7 +21,7 @@
 - [Funding](#funding)
 
 ### Overview
-**SpringpotFit** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
+**SpringpotTune** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
 - *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
 
 Preprint available <a href="https://hal.archives-ouvertes.fr/xxx" target="_blank">here</a>.
@@ -33,14 +33,14 @@ Preprint available <a href="https://hal.archives-ouvertes.fr/xxx" target="_blank
 - Demonstrated versatility and effectiveness through case studies of variable-order fractional models
 
 ### Usage
-To get started with **SpringpotFit**, follow these steps:
+To get started with **SpringpotTune**, follow these steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/americocunhajr/SpringpotFit.git
+   git clone https://github.com/americocunhajr/SpringpotTune.git
    ```
 2. Navigate to the code directory:
    ```bash
-   cd FracTune/SpringpotFit-1.0
+   cd FracTune/SpringpotTune-1.0
    ```
 3. To optimize a structure, execute the main file corresponding to your case:
    ```bash
@@ -51,7 +51,7 @@ This package includes the following files:
 * Main_XXX.m  -- xxx
 
 ### Documentation
-The routines in **SpringpotFit** are well-commented to explain their functionality. Each routine includes a description of its purpose, inputs, and outputs. 
+The routines in **SpringpotTune** are well-commented to explain their functionality. Each routine includes a description of its purpose, inputs, and outputs. 
 
 ### Reproducibility
 
@@ -61,12 +61,12 @@ Simulations done with **SpringpotFit** are fully reproducible, as can be seen on
 - José Geraldo Telles Ribeiro
 - Americo Cunha Jr
 
-### Citing FracTune
+### Citing SpringpotTune
 We ask the code users to cite the following manuscript in any publications reporting work done with our code:
 - *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
 
 ```
-@article{TellesRibeiro2024SpringpotFit,
+@article{TellesRibeiro2024SpringpotTune,
    author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
    title   = {{A}dvanced creep modeling of polypropylene: {A} variable-order fractional calculus approach},
    journal = {Under Review},
@@ -78,7 +78,7 @@ We ask the code users to cite the following manuscript in any publications repor
 ```
 
 ### License
-**SpringpotFit** is released under the MIT license. See the LICENSE file for details. All new contributions must be made under the MIT license.
+**SpringpotTune** is released under the MIT license. See the LICENSE file for details. All new contributions must be made under the MIT license.
 
 <img src="logo/mit_license_red.png" width="10%"> 
 
