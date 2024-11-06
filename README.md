@@ -40,7 +40,7 @@ To get started with **SpringpotTune**, follow these steps:
    ```
 2. Navigate to the code directory:
    ```bash
-   cd FracTune/SpringpotTune-1.0
+   cd SpringpotTune/SpringpotTune-1.0
    ```
 3. To optimize a structure, execute the main file corresponding to your case:
    ```bash
