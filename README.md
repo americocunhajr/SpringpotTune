@@ -1,6 +1,6 @@
-## XXX
+## Variable-Order Springpot Model Fitting via Cross-Entropy Method
 
-**SpringpotFit: XXX** is a Matlab package that implements a framework for tuning fractional-order controllers. The package leverages the Cross-Entropy (CE) method for global search optimization and employs an augmented Lagrangian formulation to handle equality and inequality constraints. With some straightforward adaptations, the FracTune strategy can also be applied to other types of modern controllers. 
+**SpringpotFit: Variable-Order Springpot Model Fitting via Cross-Entropy Method** is a Matlab package designed to fit variable-order springpot models (fractional rheological elements) using the Cross-Entropy (CE) method for global optimization. With simple adaptations, the SpringpotFit framework can be extended to optimize other variable-order fractional models in rheology and time-dependent systems, offering a versatile and robust approach to parameter identification.
 
 <p align="center">
 <img src="logo/SpringpotFitFramework.png" width="75%">
@@ -21,28 +21,26 @@
 - [Funding](#funding)
 
 ### Overview
-**SpringpotFit** was developed to calibrate fractional-order rheological models with time-dependent order using the cross-entropy method. Such a model is suitable for describe the complex mechanical behavior of polymers. The underlying results are reported in the following publication:
-More details are in the following paper:
+**SpringpotFit** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
 - *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
 
 Preprint available <a href="https://hal.archives-ouvertes.fr/xxx" target="_blank">here</a>.
 
 ### Features
-- Implements Cross-Entropy method for fractional-control tuning
-- Handles equality and inequality constraints using augmented Lagrangian method
-- Transparent "gray-box" optimizer with intuitive control parameters
-- Robust and scalable for moderately sized complex problems
-- Demonstrated applicability through select case studies
+- Implements the Cross-Entropy method for fitting variable-order springpot models
+- Transparent "gray-box" optimizer offering intuitive control over key parameters
+- Robust and scalable for moderately complex fitting problems in rheological systems
+- Demonstrated versatility and effectiveness through case studies of variable-order fractional models
 
 ### Usage
-To get started with **FracTune**, follow these steps:
+To get started with **SpringpotFit**, follow these steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/americocunhajr/FracTune.git
+   git clone https://github.com/americocunhajr/SpringpotFit.git
    ```
 2. Navigate to the code directory:
    ```bash
-   cd FracTune/FracTune-1.0
+   cd FracTune/SpringpotFit-1.0
    ```
 3. To optimize a structure, execute the main file corresponding to your case:
    ```bash
@@ -53,11 +51,11 @@ This package includes the following files:
 * Main_XXX.m  -- xxx
 
 ### Documentation
-The routines in **SpringpotFit** are well-commented to explain their functionality. Each routine includes a description of its purpose, as well as inputs and outputs. 
+The routines in **SpringpotFit** are well-commented to explain their functionality. Each routine includes a description of its purpose, inputs, and outputs. 
 
 ### Reproducibility
 
-Simulations done with **FracTune** are fully reproducible, as can be seen on this <a href="https://codeocean.com/capsule/xxx" target="_blank">CodeOcean capsule</a>.
+Simulations done with **SpringpotFit** are fully reproducible, as can be seen on this <a href="https://codeocean.com/capsule/xxx" target="_blank">CodeOcean capsule</a>.
 
 ### Authors
 - José Geraldo Telles Ribeiro
@@ -68,7 +66,7 @@ We ask the code users to cite the following manuscript in any publications repor
 - *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
 
 ```
-@article{Basilio2024FracTune,
+@article{TellesRibeiro2024SpringpotFit,
    author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
    title   = {{A}dvanced creep modeling of polypropylene: {A} variable-order fractional calculus approach},
    journal = {Under Review},
