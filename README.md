@@ -3,7 +3,7 @@
 **SpringpotFit: XXX** is a Matlab package that implements a framework for tuning fractional-order controllers. The package leverages the Cross-Entropy (CE) method for global search optimization and employs an augmented Lagrangian formulation to handle equality and inequality constraints. With some straightforward adaptations, the FracTune strategy can also be applied to other types of modern controllers. 
 
 <p align="center">
-<img src="logo/FracTuneFramework.png" width="75%">
+<img src="logo/SpringpotFitFramework.png" width="75%">
 </p>
 
 **SpringpotFit** uses as optimization tool the package **CEopt - Cross-Entropy Optimizer**, which can be downloaded at <a href="https://ceopt.org" target="_blank">https://ceopt.org</a>.
@@ -21,9 +21,9 @@
 - [Funding](#funding)
 
 ### Overview
-**SpringpotFit** was developed to tune fractional-order controllers for dynamical systems by solving nonconvex optimization problems via the cross-entropy method. The underlying results are reported in the following publication:
+**SpringpotFit** was developed to calibrate fractional-order rheological models with time-dependent order using the cross-entropy method. Such a model is suitable for describe the complex mechanical behavior of polymers. The underlying results are reported in the following publication:
 More details are in the following paper:
-- *J. C. C. Basilio, J. G. Telles Ribeiro, T. R. Oliveira and A. Cunha Jr, Optimal tunning of fractional controllers via cross-entropy method, 2024 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
 
 Preprint available <a href="https://hal.archives-ouvertes.fr/xxx" target="_blank">here</a>.
 
@@ -65,12 +65,12 @@ Simulations done with **FracTune** are fully reproducible, as can be seen on thi
 
 ### Citing FracTune
 We ask the code users to cite the following manuscript in any publications reporting work done with our code:
-- *J. C. C. Basilio, J. G. Telles Ribeiro, T. R. Oliveira and A. Cunha Jr, Optimal tunning of fractional controllers via cross-entropy method, 2024 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
 
 ```
 @article{Basilio2024FracTune,
-   author  = {J. C. C. Basilio and J. G. {Telles Ribeiro} and T. R. Oliveira and A {Cunha~Jr}},
-   title   = {Optimal tunning of fractional controllers via cross-entropy method},
+   author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
+   title   = {{A}dvanced creep modeling of polypropylene: {A} variable-order fractional calculus approach},
    journal = {Under Review},
    year    = {2024},
    volume  = {~},
