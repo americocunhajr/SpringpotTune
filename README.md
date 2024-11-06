@@ -48,7 +48,9 @@ To get started with **SpringpotTune**, follow these steps:
    ```
 
 This package includes the following files:
+* CEopt.m -- Cross-entropy solver
 * Main_ModelCalibration_VOSpringpot.m  -- Model calibration for the variable-order springpot
+* PlotSemilogx2.m -- Auxiliary function to plot two temporal curves from given datasets in semilogx scale
 
 ### Documentation
 The routines in **SpringpotTune** are well-commented to explain their functionality. Each routine includes a description of its purpose, inputs, and outputs. 
