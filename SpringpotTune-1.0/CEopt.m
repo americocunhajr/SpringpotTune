@@ -5,7 +5,7 @@
 %              americo.cunhajr@gmail.com
 %
 %  Originally programmed in: Jun 18, 2021
-%           Last updated in: Dec 11, 2024
+%           Last updated in: Mar 28, 2025
 % -----------------------------------------------------------------
 %  This routine employs the Cross-entropy (CE) method to solve the 
 %  following optimization problem:
@@ -22,7 +22,7 @@
 %  - lb  : (1 x Nvars) vector of lower bounds for the decision variables
 %  - ub  : (1 x Nvars) vector of upper bounds for the decision variables
 %  - g(x): R^Nvars -> R^m is a vector of m inequality constraint functions
-%  - h(x): R^Nvars -> R^p is a vector of p equality constraint functions
+%  - h(x): R^Nvars -> R^p is a vector of p equality   constraint functions
 %
 %  The  goal  is  to  minimize the scalar objective function F(x) defined 
 %  within  a  known  rectangular  domain  (feasible  region),  while also 
@@ -50,7 +50,7 @@
 %  sigma0  - (1 x Nvars) intial standard deviation
 %  lb      - (1 x Nvars) lower bound
 %  ub      - (1 x Nvars) upper bound
-%  nonlcon - nonlinear constraint function
+%  nonlcon - Function handle for the nonlinear constraint function.
 %  CEstr   -  Struct containing parameters and settings for the CE method.
 %  
 %  CEstr fields include:
@@ -708,7 +708,7 @@ function [AL,F,G,H] = ...
     if isempty(G), G = 0.0; end
     if isempty(H), H = 0.0; end
 
-    % shift 
+    % shift
     s = lambdaG/Penalty;
 
     % augmented Lagrangian function
@@ -1089,7 +1089,6 @@ function PrintEnd(Xopt, Fopt, ExitFlag, CEstr)
     fprintf('Function Evaluations: %d\n', CEstr.Fcount);
     disp('--------------------------------------------------------');
 end
-
 % -----------------------------------------------------------------
 
 % -----------------------------------------------------------------
@@ -1244,9 +1243,9 @@ function x = trnd(l,u)
                uy = u(I);
                 y = randn(size(ly));
               idx = y > ly & y < uy; % accepted
-        x(I(idx)) = y(idx);           % store the accepted
-                I = I(~idx);          % remove accepted from list
-                d = length(I);        % number of rejected
+        x(I(idx)) = y(idx);          % store the accepted
+                I = I(~idx);         % remove accepted from list
+                d = length(I);       % number of rejected
     end
 end
 % -----------------------------------------------------------------
