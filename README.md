@@ -22,7 +22,7 @@
 
 ### Overview
 **SpringpotTune** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
-- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2025 (under review)*
 
 Preprint available here.
 
@@ -48,9 +48,15 @@ To get started with **SpringpotTune**, follow these steps:
    ```
 
 This package includes the following files:
+* Main_VOSpringpot_Calibration1.m --- Calibrates the variable-order springpot model parameters (elastic modulus, viscosity, initial & asymptotic fractional orders, characteristic time, etc.) to experimental creep data
+* Main_VOSpringpot_Calibration2.m --- Performs a second calibration stage using a phenomenological equation to capture the load-dependent behavior of the mechanical properties. This script uses the CEopt black-box package (without exposing the internal CEopt code) and compares the calibrated phenomenological curve against reference values obtained from the first calibration
+* Main_VOSpringpot_StrainCurves.m --- Computes and plots the strain evolution curve for a chosen material (PP or PVC) and load using the calibrated variable-order springpot model. The script reads the experimental data from CSV files, automatically discovers the available loads, and then filters the data for the selected load value
 * CEopt.m -- Cross-entropy solver
-* Main_ModelCalibration_VOSpringpot.m  -- Model calibration for the variable-order springpot
-* PlotSemilogx2.m -- Auxiliary function to plot two temporal curves from given datasets in semilogx scale
+* CreepDataPP.csv: Contains creep test data for polypropylene (PP) with columns for load (MPa), time (days), and strain (%)
+CreepDataPVC.csv: Contains creep test data for polyvinyl chloride (PVC) with columns for load (MPa), time (days), and strain (%)
+* PlotSemilogx2.m -- Auxiliary function to plot two curves from given datasets in semilogx scale
+* PlotLoglog2.m -- Auxiliary function to plot two curves from given datasets in loglog scale
+* Plot2.m -- Auxiliary function to plot two curves from given datasets in linear scale
 
 ### Documentation
 The routines in **SpringpotTune** are well-commented to explain their functionality. Each routine includes a description of its purpose, inputs, and outputs. 
@@ -64,15 +70,15 @@ Simulations done with **SpringpotFit** are fully reproducible, as can be seen on
 - Americo Cunha Jr
 
 ### Citing SpringpotTune
-We ask the code users to cite the following manuscript in any publications reporting work done with our code:
-- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2024 (under review)*
+We ask the package users to cite the following manuscript in any publications reporting work done with our code or data:
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2025 (under review)*
 
 ```
 @article{TellesRibeiro2024SpringpotTune,
    author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
    title   = "{Advanced creep modeling of polypropylene: A variable-order fractional calculus approach}",
    journal = {Under Review},
-   year    = {2024},
+   year    = {2025},
    volume  = {~},
    pages   = {~},
    doi    = {~},
