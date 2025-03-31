@@ -48,7 +48,7 @@ To get started with **SpringpotTune**, follow these steps:
    ```
 
 This package includes the following files:
-* Main_VOSpringpot_Calibration1.m --- Calibrates the variable-order springpot model parameters (elastic modulus, viscosity, initial & asymptotic fractional orders, characteristic time, etc.) to experimental creep data
+* Main_VOSpringpot_Calibration1.m --- Calibrates the variable-order springpot model parameters (elastic modulus, viscosity, initial & asymptotic fractional orders, characteristic time, deformation rate) to experimental creep data
 * Main_VOSpringpot_Calibration2.m --- Performs a second calibration stage using a phenomenological equation to capture the load-dependent behavior of the mechanical properties. This script uses the CEopt black-box package (without exposing the internal CEopt code) and compares the calibrated phenomenological curve against reference values obtained from the first calibration
 * Main_VOSpringpot_StrainCurves.m --- Computes and plots the strain evolution curve for a chosen material (PP or PVC) and load using the calibrated variable-order springpot model. The script reads the experimental data from CSV files, automatically discovers the available loads, and then filters the data for the selected load value
 * CEopt.m -- Cross-entropy solver
