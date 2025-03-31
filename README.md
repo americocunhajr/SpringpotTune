@@ -42,9 +42,9 @@ To get started with **SpringpotTune**, follow these steps:
    ```bash
    cd SpringpotTune/SpringpotTune-1.0
    ```
-3. To calibrate the Springpot model, execute the main file corresponding to your case:
+3. To calibrate the Springpot model, execute the main file:
    ```bash
-   Main_ModelCalibration_VOSpringpot
+   Main_VOSpringpot_Calibration1
    ```
 
 This package includes the following files:
