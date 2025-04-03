@@ -22,7 +22,7 @@
 
 ### Overview
 **SpringpotTune** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
-- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2025 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling for polymers: A variable-order fractional calculus approach, 2025 (under review)*
 
 Preprint available here.
 
@@ -71,12 +71,12 @@ Simulations done with **SpringpotFit** are fully reproducible, as can be seen on
 
 ### Citing SpringpotTune
 We ask the package users to cite the following manuscript in any publications reporting work done with our code or data:
-- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling of polypropylene: A variable-order fractional calculus approach, 2025 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling for polymers: A variable-order fractional calculus approach, 2025 (under review)*
 
 ```
 @article{TellesRibeiro2024SpringpotTune,
    author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
-   title   = "{Advanced creep modeling of polypropylene: A variable-order fractional calculus approach}",
+   title   = "{Advanced creep modeling for polymers: A variable-order fractional calculus approach}",
    journal = {Under Review},
    year    = {2025},
    volume  = {~},
