@@ -66,8 +66,8 @@ The routines in **SpringpotTune** are well-commented to explain their functional
 Simulations done with **SpringpotFit** are fully reproducible, as can be seen on this <a href="https://codeocean.com/capsule/48587289-b12b-49b5-9188-938ce435acd1/" target="_blank">CodeOcean capsule</a>.
 
 ### Authors
-- José Geraldo Telles Ribeiro
-- Americo Cunha Jr
+- José Geraldo Telles Ribeiro (UERJ)
+- Americo Cunha Jr (LNCC / UERJ)
 
 ### Citing SpringpotTune
 We ask the package users to cite the following manuscript in any publications reporting work done with our code or data:
