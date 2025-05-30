@@ -19,8 +19,8 @@
 clc; clear; close all;
 
 % random number generator (fix the seed for reproducibility)
-%rng_stream = RandStream('mt19937ar','Seed',30081984);
-%RandStream.setGlobalStream(rng_stream);
+rng_stream = RandStream('mt19937ar','Seed',30081984);
+RandStream.setGlobalStream(rng_stream);
 
 % program header
 % -----------------------------------------------------------
@@ -90,15 +90,15 @@ end
 % Filter Data for the Selected Load
 % Select rows where the load equals the selected value
 % -----------------------------------------------------------------
-idx    = loads_history == sigma0;
-time   = times_history(idx)*24*3600;       % in seconds
-strain = strains_history(idx);             % in % (percentage)
+idx         = loads_history == sigma0;
+time        = times_history(idx)*24*3600;       % in seconds
+Epsilon_exp = strains_history(idx);             % in percentage
 % -----------------------------------------------------------------
 
 % Ensure data is sorted by time (if needed)
 % -----------------------------------------------------------------
 [time, sortIdx] = sort(time);
-strain          = strain(sortIdx);
+Epsilon_exp     = Epsilon_exp(sortIdx);
 % -----------------------------------------------------------------
 
 % Model Calibration Setup
@@ -130,7 +130,7 @@ CEstr.MaxIter     = 150;
 
 % Misfit function between experimental data and model prediction
 % -----------------------------------------------------------------
-F = @(x) MisfitFunc(x,time,strain/sigma0/100);
+F = @(x) MisfitFunc(x,time,Epsilon_exp/sigma0/100);
 % -----------------------------------------------------------------
 
 % Run the calibration using the CE method
@@ -172,9 +172,9 @@ graphobj.Marker2    = 'none';
 graphobj.linestyle1 = ':';
 graphobj.linestyle2 = '-';
 graphobj.xlab       = 'Time (s)';
-graphobj.ylab       = 'Strain (%)';
+graphobj.ylab       = 'Deformation (%)';
 graphobj.xmin       = 1e0;
-graphobj.xmax       = 1e9;
+graphobj.xmax       = 1e10;
 graphobj.ymin       = 1e-1;
 graphobj.ymax       = 1e1;
 graphobj.gtitle     = sprintf('Creep Response for %s at %g MPa',MyMaterial,sigma0);
@@ -187,8 +187,29 @@ graphobj.close      = 'no';
 
 % Plotting the Data
 % -----------------------------------------------------------------
-PlotLoglog2(time,strain,time,Epsilon*100,graphobj);
+PlotLoglog2(time,Epsilon_exp,time,Epsilon*100,graphobj);
 % -----------------------------------------------------------------
+
+% Save deformation curves into a file
+% -----------------------------------------------------------------
+OutputTable1 = table(time,Epsilon_exp,Epsilon*100,...
+                     'VariableNames', {'Time_sec',...
+                                       'StrainExp_percentage',...
+                                       'StrainModel_percentage'});
+OutputName1 = [sprintf('VOSpringpotCalibration_%s_sigma0_%gMPa',MyMaterial,sigma0) '.csv'];
+writetable(OutputTable1,OutputName1);
+% -----------------------------------------------------------------
+
+% Save calibration parameters into a file
+% -----------------------------------------------------------------
+OutputTable2 = table(Xopt(1),Xopt(2),Xopt(3),Xopt(4),Xopt(5),Xopt(6),...
+                     'VariableNames', {'E_MPa','eta_MPa_sec',...
+                                       'beta_0_dimless','beta_inf_dimless',...
+                                       'gamma_sec','delta_dimless'});
+OutputName2 = [sprintf('VOSpringpotParameters_%s_sigma0_%gMPa',MyMaterial,sigma0) '.csv'];
+writetable(OutputTable2,OutputName2);
+% -----------------------------------------------------------------
+
 
 
 % --- Auxiliary Functions --- %
