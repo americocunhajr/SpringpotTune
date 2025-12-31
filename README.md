@@ -24,7 +24,7 @@
 **SpringpotTune** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
 - *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modelling for polymers: a variable-order fractional calculus approach, Proceedings of the Royal Society A, Vol. 481, pp. 20240861, 2025, https://doi.org/10.1098/rspa.2024.0861*
 
-Preprint available here.
+Preprint available <a href="https://arxiv.org/abs/2510.11765v1" target="_blank">here</a>. 
 
 ### Features
 - Implements the Cross-Entropy method for fitting variable-order springpot models
