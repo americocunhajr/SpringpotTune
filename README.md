@@ -15,14 +15,14 @@
 - [Documentation](#documentation)
 - [Reproducibility](#reproducibility)
 - [Authors](#authors)
-- [Citing FracTune](#citing-fractune)
+- [Citing SpringpotTune](#citing-springpottune)
 - [License](#license)
 - [Institutional support](#institutional-support)
 - [Funding](#funding)
 
 ### Overview
 **SpringpotTune** was developed to fit variable-order springpot models for rheological systems by addressing nonconvex optimization problems using the Cross-Entropy (CE) method. The underlying results are reported in the following publication:
-- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling for polymers: A variable-order fractional calculus approach, 2025 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modelling for polymers: a variable-order fractional calculus approach, Proceedings of the Royal Society A, Vol. 481, pp. 20240861, 2025, https://doi.org/10.1098/rspa.2024.0861*
 
 Preprint available here.
 
@@ -71,17 +71,17 @@ Simulations done with **SpringpotFit** are fully reproducible, as can be seen on
 
 ### Citing SpringpotTune
 We ask the package users to cite the following manuscript in any publications reporting work done with our code or data:
-- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modeling for polymers: A variable-order fractional calculus approach, 2025 (under review)*
+- *J. G. Telles Ribeiro and A. Cunha Jr, Advanced creep modelling for polymers: a variable-order fractional calculus approach, Proceedings of the Royal Society A, Vol. 481, pp. 20240861, 2025, https://doi.org/10.1098/rspa.2024.0861*
 
 ```
-@article{TellesRibeiro2024SpringpotTune,
+@article{TellesRibeiro2025SpringpotTune,
    author  = {J. G. {Telles Ribeiro} and A. {Cunha~Jr}},
    title   = "{Advanced creep modeling for polymers: A variable-order fractional calculus approach}",
-   journal = {Under Review},
+   journal = {Proceedings of the Royal Society A},
    year    = {2025},
-   volume  = {~},
-   pages   = {~},
-   doi    = {~},
+   volume  = {481},
+   pages   = {20240861},
+   doi    = {10.1098/rspa.2024.0861},
 }
 ```
 
